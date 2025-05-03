@@ -30,6 +30,7 @@
 </template>
 
 <script>
+    import axios from "axios";
     export default {
      name:"ListaPaises",
      data() {
@@ -46,8 +47,17 @@
      methods: {
         deleteCountry(index) {
             this.paises.splice(index, 1)
-        }
-     }
+        },
+
+        obtenerTareas() {
+            axios.get("https://localhost:7121/api/Paises").then((response) => //7121
+            { this.paises = response.data; });
+        },
+     },
+     
+     created: function () { 
+        this.obtenerTareas();
+     },
     }
 </script>
 
