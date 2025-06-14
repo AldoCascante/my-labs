@@ -3,8 +3,15 @@
         <h1 class="display-4 text-center">Lista de países</h1>
     </div>
 
+    <div class="row justify-content-end">
+        <div class="col-2"> 
+            <a href="/pais">
+                <button type="button" class="btn btn-outline-secondary float-right"> Agregar país </button> 
+            </a>
+        </div>
+    </div>
+
     <div class="container mt-5">
-        <h1 class="display-4 text-center">Lista de países</h1>
         <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
                 <tr>
