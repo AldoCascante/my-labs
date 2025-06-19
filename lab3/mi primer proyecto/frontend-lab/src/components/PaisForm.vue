@@ -76,6 +76,7 @@
                 })
                 .then(function (response) { 
                     console.log(response);
+                    alert("País agregado correctamente.");
                     window.location.href = "/";
                 })
                 .catch(function (error) {

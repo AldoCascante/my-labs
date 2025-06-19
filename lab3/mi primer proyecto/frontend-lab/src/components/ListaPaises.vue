@@ -25,7 +25,7 @@
                 <tr v-for="(pais, index) of paises" :key="index">
                     <td>{{pais.nombre}}</td>
                     <td>{{pais.continente}}</td>
-                    <td>{{pais.Idioma}}</td>
+                    <td>{{pais.idioma}}</td>
                     <td>
                         <button class="btn btn-secondary btn-sm">Editar</button>
                         <button v-on:click="deleteCountry(index)" class="btn btn-danger btn-sm">Eliminar</button>
@@ -43,11 +43,11 @@
      data() {
         return {
             paises: [
-                { nombre: "Costa Rica", continente: "América", Idioma:"Español" },
-                { nombre: "Japón", continente: "Asia", Idioma: "Japonés" },
-                { nombre: "Corea del Sur", continente: "Asia", Idioma:"Coreano" },
-                { nombre: "Italia", continente: "Europa", Idioma: "Italiano" },
-                { nombre: "Alemania", continente: "Europa", Idioma: "Alemán" },
+                { nombre: "Costa Rica", continente: "América", idioma:"Español" },
+                { nombre: "Japón", continente: "Asia", idioma: "Japonés" },
+                { nombre: "Corea del Sur", continente: "Asia", idioma:"Coreano" },
+                { nombre: "Italia", continente: "Europa", idioma: "Italiano" },
+                { nombre: "Alemania", continente: "Europa", idioma: "Alemán" },
             ],
         };
      },
@@ -58,7 +58,9 @@
 
         obtenerTareas() {
             axios.get("https://localhost:7121/api/Paises").then((response) => //7121
-            { this.paises = response.data; });
+            { this.paises = response.data;
+                console.log(this.paises);
+             });
         },
      },
      
